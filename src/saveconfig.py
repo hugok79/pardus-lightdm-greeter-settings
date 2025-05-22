@@ -7,6 +7,8 @@ if len(sys.argv) > 2:
     config = sys.argv[1]
     background = sys.argv[2]
     autologin = sys.argv[3]
+    if not os.path.isdir("/etc/pardus/greeter.conf.d/"):
+        os.mkdir("/etc/pardus/greeter.conf.d/")
     with open("/etc/pardus/greeter.conf.d/00-greeter-settings.conf", "w") as f:
         f.write(config)
     if os.path.isfile(background):
