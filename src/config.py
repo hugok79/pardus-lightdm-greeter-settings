@@ -4,7 +4,7 @@ try:
     cfgs = ["/etc/pardus/greeter.conf", "/etc/lightdm/lightdm.conf"]
     for fdir in ["/usr/share/lightdm/lightdm.conf.d/", "/etc/pardus/greeter.conf.d/"]:
         if os.path.isdir(fdir):
-            for cdir in os.listdir(fdir):
+            for cdir in sorted(os.listdir(fdir)):
                 cfgs.append(fdir+cdir)
 
     config = configparser.RawConfigParser()
