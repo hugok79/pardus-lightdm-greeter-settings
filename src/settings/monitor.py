@@ -4,10 +4,11 @@ self.settings["monitor"].set_data("mirror", {
     "label": _("Mirror monitors"),
     "value": config.get("mirror", "true", "screen"),
 })
+monitors = util.list_monitors()
 self.settings["monitor"].set_data("default-monitor-name", {
     "label": _("Default monitor"),
-    "options": util.list_monitors(),
-    "value": config.get("default-monitor-name", util.list_monitors()[0], "screen")
+    "options": monitors,
+    "value": config.get("default-monitor-name", monitors[0] if len(monitors) > 0 else "", "screen")
 })
 
 settings = self.settings
