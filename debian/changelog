@@ -1,3 +1,10 @@
+pardus-lightdm-greeter-settings (0.0.8) unstable; urgency=medium
+
+  [ Ali Riza KESKIN ]
+  * check monitor count
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Wed, 08 Oct 2025 10:08:04 +0300
+
 pardus-lightdm-greeter-settings (0.0.7) unstable; urgency=medium
 
   [ Ali Riza KESKIN ]
